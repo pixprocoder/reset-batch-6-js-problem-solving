@@ -26,7 +26,7 @@ for (let i = 1; i <= 10; i++) {
   //   console.log(sum2);
 }
 
-// Problem 2 = এমন একটা ফাংশন বানাও যেটা একটি অ্যারে নিবে ইনপুট হিসেবে। তারপর সেই অ্যারের সকল  উপাদান এর মধ্যে ৫ এর চেয়ে বড় যে সকল সংখ্যা আছে তাদের কাউন্ট নির্ণয় করবে।
+// Problem 3 = এমন একটা ফাংশন বানাও যেটা একটি অ্যারে নিবে ইনপুট হিসেবে। তারপর সেই অ্যারের সকল  উপাদান এর মধ্যে ৫ এর চেয়ে বড় যে সকল সংখ্যা আছে তাদের কাউন্ট নির্ণয় করবে।
 
 // for (let i = 0; i < numbers.length; i++) {
 //   const element = numbers[i];
@@ -48,4 +48,19 @@ function graterThanFive(numbers) {
 
 const numbers = [-1, 2, -3, 4, 5, 6, -7, 8, -9, 33, 10];
 const result = graterThanFive(numbers);
-console.log(result);
+// console.log(result);
+
+// Problem 4: তোমার দুজন বন্ধুর নাম একটি ফাংশনের প্যারামিটার হিসেবে পাস করো। তারপর এই দুইটি নামের মধ্যে যে নামটি বড়ো সেটি reverse অর্ডারে রিটার্ন করো।
+
+function twoFriends(friends) {
+  const friendOne = friends[0];
+  const friendTwo = friends[1];
+  if (friendOne.length > friendTwo.length) {
+    return friendOne.split("").reverse().join("");
+  }
+  return friendTwo.split("").reverse().join("");
+}
+
+const friends = ["monjur", "ali"];
+const result4 = twoFriends(friends);
+console.log(result4);
