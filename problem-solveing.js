@@ -51,16 +51,39 @@ const result = graterThanFive(numbers);
 // console.log(result);
 
 // Problem 4: তোমার দুজন বন্ধুর নাম একটি ফাংশনের প্যারামিটার হিসেবে পাস করো। তারপর এই দুইটি নামের মধ্যে যে নামটি বড়ো সেটি reverse অর্ডারে রিটার্ন করো।
+// Approach 1
+// function twoFriends(friends) {
+//   const friendOne = friends[0];
+//   const friendTwo = friends[1];
+//   if (friendOne.length > friendTwo.length) {
+//     return friendOne.split("").reverse().join("");
+//   }
+//   return friendTwo.split("").reverse().join("");
+// }
 
-function twoFriends(friends) {
+// const friends = ["monjur", "ali"];
+// const result4 = twoFriends(friends);
+// console.log(result4);
+
+// Approach 2
+
+function reverseString(friends) {
   const friendOne = friends[0];
   const friendTwo = friends[1];
+  let largeName = "";
   if (friendOne.length > friendTwo.length) {
-    return friendOne.split("").reverse().join("");
+    largeName = friendOne;
+  } else {
+    largeName = friendTwo;
   }
-  return friendTwo.split("").reverse().join("");
+  // reversing the name
+  let reverseString = "";
+  for (let i = largeName.length - 1; i >= 0; i--) {
+    const element = largeName[i];
+    reverseString = reverseString + element;
+  }
+  return reverseString;
 }
-
 const friends = ["monjur", "ali"];
-const result4 = twoFriends(friends);
+const result4 = reverseString(friends);
 console.log(result4);
